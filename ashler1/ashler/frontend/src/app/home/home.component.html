@@ -241,11 +241,11 @@
       </div>
       <div
         class="mb-4 grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-4"
-      >
+        > 
         <div
           *ngFor="let voiture of voitures"
           class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
-        >
+          [routerLink]="['/voiture-detail', voiture.id]">
           <div class="h-56 w-full">
             <a [href]="voiture.cheminImage">
               <img
