@@ -1,0 +1,64 @@
+<div class="mx-auto px-4">
+  <!-- Navbar -->
+  <header class="container py-6 bg-white">
+    <nav class="flex items-center justify-between">
+      <a routerLink="/" class="text-2xl font-extrabold text-blue-500">
+        VOITURES RARES
+      </a>
+      <div class="hidden md:flex gap-6">
+        <a
+          routerLink="/"
+          class="text-gray-600 hover:text-blue-500 font-medium transition-colors"
+          >Accueil</a
+        >
+        <a
+          [routerLink]="['/profil', 1]"
+          class="text-gray-600 hover:text-blue-500 font-medium transition-colors"
+          >Mon profil</a
+        >
+      </div>
+      <button
+        id="menu-button"
+        class="md:hidden text-gray-600 hover:text-blue-500 focus:outline-none"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <router-outlet></router-outlet>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-center text-white">
+    <p>&copy; 2025 E-commerce de Voitures. Tous droits réservés.</p>
+  </footer>
+</div>
+
+<!-- Menu mobile -->
+<div
+  id="menu"
+  class="hidden md:hidden fixed inset-0 bg-gray-800 text-white flex flex-col items-center pt-20"
+>
+  <a routerLink="/" class="px-3 py-2 text-gray-300 hover:text-white mb-4">
+    Accueil
+  </a>
+  <a
+    [routerLink]="['/profil', 1]"
+    class="px-3 py-2 text-gray-300 hover:text-white mb-4"
+  >
+    Mon profil
+  </a>
+</div>
